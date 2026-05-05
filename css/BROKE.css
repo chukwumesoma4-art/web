@@ -1,0 +1,73 @@
+body{
+     background-color:rgb(228, 149, 30);
+   }
+   pre{
+     color: rgb(20, 19, 19);
+   }
+@font-face {
+    font-family: RockSalt-Regylar ;
+    src: url(fonts/RockSalt-Regular.ttf);
+}
+   h2{
+    font-family: RockSalt-Regylar, verdana,Arial;
+    text-shadow: 3px 3px 4px rgb(15, 15, 18);
+    background-image: url(images/logo.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   }
+   .dropdown{
+    display: inline-block;
+   }
+
+   .dropdown button{
+    background-color:rgb(228, 149, 30) ;
+    cursor: pointer;
+    border: none;
+
+   }
+   .dropdown s{
+     display: block;
+     color: black;
+     text-decoration: none;
+     padding: 9px 12px;
+   }
+   .dropdown .content{
+    position: absolute;
+    display: none;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px;
+   }
+   .dropdown:hover .content{
+   display: block;
+   }
+   .dropdown:hover button{
+    background-color:rgb(27, 27, 27);
+   }
+   .dropdown s:hover{
+    background-color: rgb(62, 44, 44);
+   }
+   body{
+     margin: 0px;
+    background-color: rgb(228, 149, 30);
+     
+   }
+   .navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+   }
+  .navbar s{
+   
+   text-decoration: none;
+   padding: 15px;
+   display:block;
+
+  }
+  .navbar s:hover{
+background-color: darkorange;
+  }
+  .navbar li{
+    float: left;
+  }
