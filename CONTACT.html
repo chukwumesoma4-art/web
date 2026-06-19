@@ -1,60 +1,75 @@
-<!DOCTYPE.html>
-<html>
-    <title style="color: rgb(105, 156, 251);">CONTACT</title>
-    
-    <div  class="dropdown">
-        <button> BROKE</button>
-        <div class="content">
-              <a href="">about us</a>
-              <a href=""> CONTACTS </a>
-             <a href="">SGIN IN </a>
-             <a href=""> ITEMS </a>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact BROKE Wear | Fashion Support South Africa</title>
+        <meta name="description" content="Get in touch with BROKE Wear for support, enquiries, and product information.">
+        <link rel="stylesheet" href="css/BROKE.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+        <link rel="icon" href="images/broke.jpg" type="image/jpeg">
+    </head>
+    <body>
+        <header>
+            <h2>BROKE</h2>
+            <hr>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Homepage.html">Homepage</a></li>
+                    <li><a href="ABOUT US .html">ABOUT US</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                    <li><a href="SIGN IN .html">SIGN IN</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </header>
 
-        </div>
-    
-    </div>
-    
-<link rel="icon" type="jpg" href="images/broke.jpg">
-<h2 style="color: rgb(105, 156, 251);">BROKE</h2>
-<header style="background-color: gray;">
-    <hr>
-   <nav class="navbar">
-     <ul>
-     <li><a href="Homepage.html"> Homepage </a></li>
-     <li> <a href="ABOUT US .html"> ABOUT US  </a></li>
-     <li><a href="CONTACT.html"> CONTACT </a></li>
-     <li><a href="SIGN IN .html">SIGN IN </a></li>
-     <li><a href="Shop.html">Shop </a></li>
-     </ul>
-     </nav>
-     <hr>
-</header>
-<main>
-<img src="images/broke.jpg">
-<img style="background-image: url(images/broke.jpg);" >
-</main>
+        <main>
+            <img src="images/broke.jpg" alt="BROKE logo">
 
-<footer style="background-color: grey;">
-    <hr>
-  <small> <a href="mailto:hello@sobrok.online">@BROKE</a> </small>
-   Authour: Oyama 
-   &COPY; copyright 2026 BROKE all rights reserved
- <hr>
-</footer>
-<link rel="stylesheet" href="shelf style.css">
-<body>
-    <h3>Contact</h3>
-    <p>
-        If you want to send us your questions, comments, concerns or pictures of your carts,
-         you can find all of our contact information below.
-         <br>
-         <hr>
-         BROKE Online Order Queries
-         hello@sobrok.online
-        <hr>
-        <br>
-        BROKE Customer Service
+            <h2>Contact</h2>
+            <p>
+                If you want to send us your questions, comments, concerns or pictures of your carts,
+                you can find all of our contact information below.
+            </p>
 
-    </p>
-</body>
+            <section>
+                <h3>Online Order Queries</h3>
+                <p>hello@sobrok.online</p>
+            </section>
+
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+
+            <p id="result"></p>
+
+            <h2>Find Us</h2>
+            <div id="map" style="height:400px;"></div>
+        </main>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            var map = L.map('map').setView([-33.9249, 18.4241], 13);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            L.marker([-33.9249, 18.4241]).addTo(map).bindPopup('BROKE Wear').openPopup();
+        </script>
+
+        <footer>
+            <hr>
+            <small><a href="mailto:admin@broke.co.za">@BROKE</a></small>
+            Author: Oyama — © 2026 BROKE. All rights reserved.
+            <hr>
+        </footer>
+    </body>
 </html>
