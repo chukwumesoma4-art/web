@@ -1,64 +1,81 @@
-<!DOCTYPE.html>
-<html>
-    <title style="color: rgb(100, 145, 249);">BROKE</title>
-    
-    <div  class="dropdown">
-        <button> BROKE</button>
-        <div class="content">
-              <a href="">about us</a>
-              <a href=""> CONTACTS </a>
-             <a href="">SGIN IN </a>
-             <a href=""> ITEMS </a>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Homepage</title>
+        <meta name="description" content="BROKE Wear offers premium streetwear inspired by youth culture, fashion, and creativity in South Africa.">
+        <meta name="keywords" content="BROKE Wear, streetwear, fashion, clothing, South Africa, hoodies, caps">
+        <link rel="stylesheet" href="css/BROKE.css">
+        <link rel="icon" href="images/broke.jpg" type="image/jpeg">
+    </head>
 
+    <body>
+        <div class="image-container">
+            <hr>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Homepage.html">Homepage</a></li>
+                    <li><a href="ABOUT US .html">ABOUT US</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                    <li><a href="SIGN IN .html">SIGN IN</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+            <img src="images/Broke Boy$.jpeg" alt="BROKE Model">
+
+            <div class="overlay-text">
+                <h1>JUST DROPPED</h1>
+                <a href="Shop.html" class="shop-btn">
+                    <button>FRESH GEAR</button>
+                </a>
+            </div>
         </div>
-    
-    </div>
-    
-<link rel="icon" type="jpg" href="images/broke.jpg">
-<h2 style="color: rgb(100, 145, 249);">BROKE</h2>
-<header style="background-color: gray;">
-    <hr>
-    <nav class="navbar">
-     <ul>
-     <li><a href="Homepage.html"> Homepage </a></li>
-     <li> <a href="ABOUT US .html"> ABOUT US  </a></li>
-     <li><a href="CONTACT.html"> CONTACT </a></li>
-     <li><a href="SIGN IN .html">SIGN IN </a></li>
-     <li><a href="Shop.html">Shop </a></li>
-     </ul>
-     </nav>
-     <hr>
-</header>
-<main>
-<img src="images/broke.jpg">
-<h3>Home page</h3>
-</main>
 
-<footer style="background-color: grey;">
-    <hr>
-  <small> <a href="emailto:admin@broke.co.za">@BROKE</a> </small>
-   Authour: Oyama 
-   &COPY; copyright 2026 BROKE all rights reserved
- <hr>
-</footer>
-<link rel="stylesheet" href="broke.css">
+        <input type="text" id="searchBar" placeholder="Search products...">
+        <button onclick="searchProduct()">Search</button>
 
-<body>
-    <br>
-    <img src="/images/caps.jpg" height="250px" alt=" broke caps">
-    
-    <img src="/images/essentals.jpg" height="250px" alt="babe jersey">
-    
-    <img src="/images/knit.jpg" height="250px" alt="charthart tee-shirt">
-    
-    <img src="/images/new stuff.jpg" height="250px" alt="nike Vest">
-    
- <img src="/images/tracksuit.jpg" height="250px" width="180px">
- 
- <img src="/images/shop all.jpg" height="250px"width="180px">
- 
+        <div class="product" data-name="cap">
+            <img src="images/newCap.jpeg" alt="BROKE Cap" width="280" height="300">
+            <h3>Cap</h3>
+        </div>
 
-    
-</body>
+        <div class="product" data-name="tracksuit">
+            <img src="images/camaflash.jpeg" alt="BROKE Tracksuit" width="280" height="300">
+            <h3>Tracksuit</h3>
+        </div>
 
+        <div class="product" data-name="essentials">
+            <img src="images/dakota.jpeg" alt="BROKE Essentials" width="280" height="300">
+            <h3>Essentials</h3>
+        </div>
+
+        <div class="product" data-name="knit">
+            <img src="images/bull knit.jpeg" alt="BROKE Knit" width="280" height="300">
+            <h3>Knit</h3>
+        </div>
+
+        <div class="gallery">
+            <img src="images/caps.jpg" alt="BROKE Cap" onclick="openImage(this.src)">
+            <img src="images/tracksuit.jpg" alt="BROKE Tracksuit" onclick="openImage(this.src)">
+            <img src="images/essentals.jpg" alt="BROKE Essentials" onclick="openImage(this.src)">
+            <img src="images/knit.jpg" alt="BROKE Knit" onclick="openImage(this.src)">
+            <img src="images/new stuff.jpg" alt="BROKE New Stuff" onclick="openImage(this.src)">
+            <img src="images/shop all.jpg" alt="BROKE Shop All" onclick="openImage(this.src)">
+        </div>
+
+        <div id="lightbox">
+            <span onclick="closeImage()">&times;</span>
+            <img id="lightboxImg" alt="Expanded image">
+        </div>
+
+        <footer>
+            <hr>
+            <small><a href="mailto:admin@broke.co.za">@BROKE</a></small>
+            Author: Oyama — © 2026 BROKE. All rights reserved.
+            <hr>
+        </footer>
+    </body>
 </html>
