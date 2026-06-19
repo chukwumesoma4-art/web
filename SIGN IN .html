@@ -1,44 +1,58 @@
-<!DOCTYPE.html>
-<html>
-    <title style="color: rgb(105, 156, 251);">SGIN IN</title>
-    
-    <div  class="dropdown">
-        <button> BROKE</button>
-        <div class="content">
-              <a href="">about us</a>
-              <a href=""> CONTACTS </a>
-             <a href="">SGIN IN </a>
-             <a href=""> HOMEPAGE </a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIGN IN</title>
+    <link rel="stylesheet" href="css/BROKE.css">
+    <link rel="icon" href="images/broke.jpg" type="image/jpeg">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="Homepage.html">Homepage</a></li>
+          <li><a href="ABOUT US .html">ABOUT US</a></li>
+          <li><a href="CONTACT.html">CONTACT</a></li>
+          <li><a href="SIGN IN .html">SIGN IN</a></li>
+          <li><a href="Shop.html">Shop</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        </div>
-    
+    <div class="image-container">
+      <img src="images/Broke Boy$.jpeg" alt="BROKE Model">
+      <div class="overlay-text">
+        <h1>JUST DROPPED</h1>
+        <a href="Shop.html" class="shop-btn"><button>FRESH GEAR</button></a>
+      </div>
     </div>
-    
-<link rel="icon" type="jpg" href="images/broke.jpg">
-<h2 style="color: rgb(105, 156, 251);">BROKE</h2>
-<main>
-<img src="images/broke.jpg">
-</main>
 
-<footer style="background-color: grey;">
-    <hr>
-  <small> <a href="emailto:admin@shelflife.co.za">@shelflife</a> </small>
-   Authour: Oyama 
-   &COPY; copyright resevered
- <hr>
-</footer>
-<link rel="stylesheet" href="broke.css">
+    <main>
+      <video autoplay loop muted controls width="700" height="200">
+        <source src="images/BrokeVid.mp4" type="video/mp4">
+      </video>
 
-<form action="Shop.html" method="get">
-  
-       <label>Name</label>
-       <input type="text" id=" name" maxlength="10" required>
-     <label>Surname</label>
-       <input type="text" id=" Surname" maxlength="10" required>
-      <label> email</label>
-        <input type="email"id=" Email" maxlength="30"required>
-       <br>
-       <input type="submit">
- </form>
- 
+      <form action="Shop.html" method="get">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" maxlength="50" required>
+
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname" maxlength="50" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" maxlength="80" required>
+
+        <br>
+        <input type="submit" value="Sign In">
+      </form>
+    </main>
+
+    <footer>
+      <hr>
+      <small><a href="mailto:admin@broke.co.za">@BROKE</a></small>
+      Author: Oyama — © 2026 BROKE. All rights reserved.
+      <hr>
+    </footer>
+  </body>
 </html>
