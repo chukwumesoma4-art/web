@@ -1,66 +1,93 @@
-<!DOCTYPE.html>
-<html>
-    <title style="color: rgb(105, 156, 251);">Shop</title>
-    <div  class="dropdown">
-        <button> BROKE</button>
-        <div class="content">
-              <a href="">about us</a>
-              <a href=""> CONTACTS </a>
-             <a href="">SGIN IN </a>
-             <a href=""> HOMEPAGE </a>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shop</title>
+        <link rel="stylesheet" href="css/BROKE.css">
+        <link rel="icon" href="images/broke.jpg" type="image/jpeg">
+    </head>
+    <body>
+        <header>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Homepage.html">Homepage</a></li>
+                    <li><a href="ABOUT US .html">ABOUT US</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                    <li><a href="SIGN IN .html">SIGN IN</a></li>
+                    <li><a href="Shop.html">Shop</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        </div>
-    
-    </div>
-    
+        <main>
+            <img src="images/broke.jpg" alt="BROKE banner">
 
-<link rel="icon" type="jpg" href="images/broke.jpg">
-<h2 style="color: rgb(105, 156, 251);">Shop</h2>
-<header style="background-color: gray;">
-    
-   <nav class="navbar">
-     <ul>
-     <li><a href="Homepage.html"> Homepage </a></li>
-     <li> <a href="ABOUT US .html"> ABOUT US  </a></li>
-     <li><a href="CONTACT.html"> CONTACT </a></li>
-     <li><a href="SIGN IN .html">SIGN IN </a></li>
-        <li><a href="Shop.html">Shop </a></li>
-     </ul>
-     </nav>
-    
-</header>
-<main>
-<img src="images/broke.jpg">
-</main>
+            <div class="products">
+                <img src="images/Bvest.jpg" height="250" alt="BROKE vest">
+                <img src="images/jersey.jpg" height="250" alt="jersey">
+                <img src="images/mafia top.jpg" height="250" alt="mafia top">
+                <img src="images/pants.jpg" height="250" alt="pants">
+                <img src="images/painter cap.jpg" height="250" alt="painter cap" width="180">
+                <img src="images/undera.jpg" height="250" alt="underwear" width="180">
+                <img src="images/wind.jpg" height="250" alt="wind cap">
+                <img src="images/B shirt.jpg" height="250" alt="broke shirt">
+            </div>
 
-<footer style="background-color: grey;">
-    <hr>
-  <small> <a href="mailto:hello@sobrok.online">@BROKE</a> </small>
-   Authour: Oyama 
-   &COPY; copyright 2026 BROKE all rights reserved
- <hr>
-</footer>
-<link rel="stylesheet" href="broke.css">
-<body>
-    <br>
-    <img src="images/Bvest.jpg" height="250px" alt="BROKE vest">
-    
-    <img src="images/jersey.jpg" height="250px" alt=" jersey">
-    
-    <img src="images/mafia top.jpg" height="250px" alt="mafia top">
-    
-    <img src="images/pants.jpg" height="250px" alt="pants">
-    
- <img src="images/painter cap.jpg" height="250px" alt="painter cap" width="180px">
- 
- <img src="images/undera.jpg" height="250px" alt="underwear" width="180px">
- 
- <img src="images/wind.jpg" height="250px" alt="wind cap">
- 
- <img src="images/B shirt.jpg" height="250px" alt="broke shirt">
- 
+            <form id="enquiryForm">
+                <label for="product">Product</label>
+                <select id="product" name="product">
+                    <option>Cap</option>
+                    <option>Tracksuit</option>
+                    <option>T-Shirt</option>
+                    <option>Knit Wear</option>
+                    <option>Essentials</option>
+                </select>
 
-    
-</body>
+                <label>Size</label>
+                <label><input type="radio" name="size" value="S"> S</label>
+                <label><input type="radio" name="size" value="M"> M</label>
+                <label><input type="radio" name="size" value="L"> L</label>
 
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity">
+
+                <button type="submit">Check Availability</button>
+            </form>
+             <section class="hero">
+                <h1>BROKE</h1>
+                <p>Being rebellious over conforming to expectations.</p>
+                <button>SHOP NOW</button>
+            </section>
+            <p id="response"></p>
+            <div class="pagination">
+                <a href="Shop.html" class="active">1</a>
+                <a href="Shop1.html">2</a>
+                <a href="Shop2.html">3</a>
+                <a href="Shop3.html">4</a>
+                <a href="Shop4.html">5</a>
+            </div>
+        </main>
+
+        <footer>
+
+         <h3>Rate This Product</h3>
+
+       <div class="stars">
+         <span class="star" onclick="setRating(1)">★</span>
+         <span class="star" onclick="setRating(2)">★</span>
+         <span class="star" onclick="setRating(3)">★</span>
+         <span class="star" onclick="setRating(4)">★</span>
+         <span class="star" onclick="setRating(5)">★</span>
+       </div>
+
+<p id="ratingText">Select a rating</p>
+
+            <hr>
+            <small><a href="mailto:hello@sobrok.online">@BROKE</a></small>
+            Author: Oyama — © 2026 BROKE. All rights reserved.
+            <hr>
+        </footer>
+    </body>
 </html>
