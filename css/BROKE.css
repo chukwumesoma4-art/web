@@ -1,73 +1,346 @@
-body{
-     background-color:rgb(228, 149, 30);
-   }
-   pre{
-     color: rgb(20, 19, 19);
-   }
-@font-face {
-    font-family: RockSalt-Regylar ;
-    src: url(fonts/RockSalt-Regular.ttf);
+:root{
+    --accent: rgb(100,145,249);
+    --dark: rgb(4,32,97);
+    --muted: #f7f7f8;
+    --brand: rgb(228,149,30);
 }
-   h2{
-    font-family: RockSalt-Regylar, verdana,Arial;
-    text-shadow: 3px 3px 4px rgb(15, 15, 18);
-    background-image: url(images/logo.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: var(--dark);
+}
+
+pre{color:var(--accent)}
+
+@font-face{font-family:RockSalt-Regular;src:url(fonts/RockSalt-Regular.ttf)}
+
+h2{
+    font-family: RockSalt-Regular, Verdana, Arial, sans-serif;
+    text-shadow:3px 3px 4px rgb(242,244,249);
+    color:var(--accent);
+    margin:0 0 1rem 0;
+}
+
+body::selection{background-color:var(--muted);color:var(--accent)}
+.title{color:var(--accent)}
+.header, footer{color:var(--dark);background-color:gray}
+.navbar{background-color:gray;padding:8px 15px}
+.navbar ul{list-style:none;padding:0;margin:0;display:flex;justify-content:center;gap:12px;align-items:center}
+.navbar li{display:inline-block}
+.navbar a{text-decoration:none;color:#fff;padding:8px 10px;border-radius:4px;transition:background-color .2s}
+.navbar a:hover{background-color:var(--accent)}
+video{
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+    height:auto;
+}
+
+/* General containers */
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Products grid */
+.products{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:20px 0}
+.product{background:#fff;border:1px solid #eee;border-radius:8px;padding:12px;text-align:center;width:260px}
+.product img{width:100%;height:auto;border-radius:6px}
+
+/* Buttons */
+button, .shop-btn button{background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+button:hover{opacity:.95}
+.shop-btn{display:inline-block}
+
+/* Forms */
+form{max-width:700px;margin:20px auto}
+form input[type="text"],form input[type="email"],form input[type="number"],form textarea,form select{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;margin:6px 0}
+form label{display:block;margin-top:8px;font-weight:600}
+
+
+
+
+/* TABLETS */
+
+@media screen and (max-width: 1024px){
+
+    /* NAVBAR */
+    .navbar ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .navbar li{
+        display: inline-block;
+    }
+
+    .navbar a{
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    /* TEXT */
+    p{
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    /* HEADINGS */
+    h2{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    h3{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    /* IMAGES */
+    img{width:90%;height:auto;display:block;margin:auto}
+
+    /* VIDEOS */
+    video{
+        width: 100%;
+        height: auto;
+    }
+
+    /* PRODUCT CARDS */
+    .card{
+        width: 45%;
+    }
+
+    /* FOOTER */
+    footer{
+        text-align: center;
+    }
+}
+
+/* MOBILE DEVICES */
+
+@media screen and (max-width: 768px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar a{
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #333;
+        font-size: 14px;
+    }
+
+    /* DROPDOWN */
+    .dropdown{
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown button{
+        width: 90%;
+    }
+
+    .dropdown .content{
+        width: 90%;
+    }
+
+    /* TEXT */
+    p{
+        font-size: 15px;
+        padding: 10px;
+        line-height: 1.7;
+    }
+
+    /* HEADINGS */
+    h2{
+        font-size: 28px;
+    }
+
+    h3{
+        font-size: 22px;
+    }
+
+    /* IMAGES */
+    img{
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    /* VIDEOS */
+    video{
+        width: 100%;
+        height: auto;
+    }
+
+    /* PRODUCT CARDS */
+    .card{
+        width: 90%;
+    }
+
+    /* FOOTER */
+    footer{
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media screen and (max-width: 480px){
+
+    h2{
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .navbar a{
+        font-size: 13px;
+        padding: 12px;
+    }
+}
+
+#map{
+    height:400px;
+    width:100%;
+}
+#lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+}
+
+#lightbox img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:90%;max-height:90%}
+#lightbox span{position:absolute;top:20px;right:30px;color:#fff;font-size:36px;cursor:pointer}
+
+/* PAGINATION */
+
+.pagination{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.pagination a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 12px 18px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pagination a:hover{
+    background-color: rgb(228,149,30);
+    color: white;
+}
+
+.pagination a.active{
+    background-color: rgb(228,149,30);
+}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    background-image: url("images/ace.jpg");
+    background-size: cover;
     background-position: center;
-   }
-   .dropdown{
-    display: inline-block;
-   }
+}
 
-   .dropdown button{
-    background-color:rgb(228, 149, 30) ;
-    cursor: pointer;
-    border: none;
-
-   }
-   .dropdown s{
-     display: block;
-     color: black;
-     text-decoration: none;
-     padding: 9px 12px;
-   }
-   .dropdown .content{
+.overlay{
     position: absolute;
-    display: none;
-    min-width: 100px;
-    box-shadow: 2px 2px 5px;
-   }
-   .dropdown:hover .content{
-   display: block;
-   }
-   .dropdown:hover button{
-    background-color:rgb(27, 27, 27);
-   }
-   .dropdown s:hover{
-    background-color: rgb(62, 44, 44);
-   }
-   body{
-     margin: 0px;
-    background-color: rgb(228, 149, 30);
-     
-   }
-   .navbar ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-   }
-  .navbar s{
-   
-   text-decoration: none;
-   padding: 15px;
-   display:block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-  }
-  .navbar s:hover{
-background-color: darkorange;
-  }
-  .navbar li{
-    float: left;
-  }
+    background-color: rgba(0,0,0,0.4);
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-container{
+    position: relative;
+    display:block;
+    width:100%;
+    overflow:hidden;
+}
+
+.image-container img{
+    width:100%;display:block;filter:brightness(70%);height:auto;object-fit:cover
+}
+
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+    text-align: center;
+}
+.overlay-text h1{font-size:clamp(28px,6vw,64px);margin:0;letter-spacing:1px}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:20px 0}
+.gallery img{width:100%;height:140px;object-fit:cover;border-radius:6px;cursor:pointer}
+
+/* small tweaks */
+.title, h1, h2, h3{margin:0}
+.footer-small{font-size:.9rem}
+/* cleaned stray properties */
+
+
+.stars{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.star{
+    color: lightgray;
+    transition: 0.3s;
+}
+
+.star:hover{
+    transform: scale(1.2);
+}
+
+.active{
+    color: gold;
+}
