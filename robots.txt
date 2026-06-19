@@ -1,0 +1,6 @@
+ User-agent: *
+Allow: /
+User-agent: *
+Allow: /
+
+Sitemap: https://file:///C:/Users/chukw/OneDrive/Desktop/html/shelflife/Homepage.html.com/sitemap.xml
